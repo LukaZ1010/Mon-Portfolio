@@ -359,7 +359,7 @@ h1, h2, h3, h4 {
 .spongebob-house {
     position: absolute;
     bottom: 40px; /* Posé sur le sable */
-    left: 50%;
+    left: 67%;
     transform: translateX(-50%);
     height: 280px; /* Plus grand */
     width: auto;
