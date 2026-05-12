@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五千常用汉字 — Les 5000 caractères chinois</title>
+    <meta name="description"
+        content="Application PWA pour explorer et mémoriser les 5000 caractères chinois les plus utilisés, avec Pinyin et significations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/hanzi-site.css">
+</head>
+
+<body>
+
+    <!-- Bubble overlay -->
+    <div id="bubble-overlay"></div>
+
+    <!-- Back to portfolio -->
+    <a href="../index.html" class="back-btn">← Portfolio</a>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="pwa-badge">⚡ APPLICATION PWA</div>
+        <div class="hero-hanzi">五千常用汉字</div>
+        <div class="hero-subtitle">Les 5000 caractères chinois les plus utilisés</div>
+        <h1 class="hero-tagline">Explorez, cherchez &amp; mémorisez le mandarin</h1>
+        <p class="hero-desc">
+            Application web progressive permettant d'explorer et mémoriser les 5000 caractères
+            chinois les plus courants, avec leur Pinyin et leur signification en français et anglais.
+            Fonctionne hors ligne, installable sur mobile.
+        </p>
+        <div class="scroll-hint">
+            DÉCOUVRIR
+            <svg viewBox="0 0 24 24" width="22" height="22">
+                <path d="M12 15.5l-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4z" fill="rgba(255,255,255,0.5)" />
+                <path d="M12 21.5l-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4z" fill="rgba(255,255,255,0.25)" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Wave separator -->
+    <div class="wave-divider" style="background: linear-gradient(to bottom,#003a5c,#001220);">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,20 1440,40 L1440,80 L0,80 Z"
+                fill="#001220" />
+            <path d="M0,60 C180,100 360,20 540,60 C720,100 900,20 1080,60 C1260,100 1440,40 1440,60 L1440,80 L0,80 Z"
+                fill="rgba(0,18,32,0.5)" />
+        </svg>
+    </div>
+
+    <!-- FEATURES -->
+    <section class="section">
+        <h2 class="section-title">🌊 Fonctionnalités</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Recherche instantanée</h3>
+                <p>Cherchez par Hanzi, Pinyin ou signification — les résultats s'affichent en temps réel.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>PWA — Hors ligne</h3>
+                <p>Installez l'app sur votre téléphone. Fonctionne sans connexion grâce au Service Worker.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📖</div>
+                <h3>Mode Scroll &amp; Pages</h3>
+                <p>Parcourez la liste en scroll infini ou naviguez page par page à votre rythme.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🗂️</div>
+                <h3>5000 entrées</h3>
+                <p>Rang, caractère, Pinyin et signification — les 5000 hanzi les plus fréquents du mandarin moderne.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA VERS L'APPLICATION -->
+    <section class="section" style="padding-top:0; text-align:center;">
+        <h2 class="section-title">🚀 Accéder à l'application</h2>
+        <p style="color:rgba(255,255,255,0.65); max-width:560px; margin:0 auto 40px; line-height:1.7; font-size:1rem;">
+            L'application complète est disponible directement dans le navigateur. Explorez les 5000 hanzi,
+            activez le mode hors ligne et installez-la sur votre téléphone comme une vraie application.
+        </p>
+        <a href="hanzi.html" target="_blank" class="launch-btn">
+            <span class="launch-icon">汉字</span>
+            Ouvrir l'application →
+        </a>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="section">
+        <h2 class="section-title">🛠️ Technologies utilisées</h2>
+        <div class="tech-grid">
+            <div class="tech-pill">🌐 HTML5 / CSS3</div>
+            <div class="tech-pill">⚡ JavaScript Vanilla</div>
+            <div class="tech-pill">📦 Service Worker</div>
+            <div class="tech-pill">📄 Web App Manifest</div>
+            <div class="tech-pill">💾 Cache API</div>
+            <div class="tech-pill">📱 Responsive Design</div>
+            <div class="tech-pill">🔤 Google Fonts</div>
+        </div>
+    </section>
+
+    <script>
+        // ── BUBBLE ENTRY EFFECT ──
+        (function spawnBubbles() {
+            const overlay = document.getElementById('bubble-overlay');
+            const count = 38;
+
+            for (let i = 0; i < count; i++) {
+                setTimeout(() => {
+                    const b = document.createElement('div');
+                    b.classList.add('bubble');
+                    const size = 20 + Math.random() * 80;
+                    const left = Math.random() * 100;
+                    const dur = 1.8 + Math.random() * 2.2;
+                    const delay = Math.random() * 1.4;
+
+                    b.style.cssText = `
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${left}%;
+                        bottom: -${size}px;
+                        --dur: ${dur}s;
+                        animation-delay: ${delay}s;
+                    `;
+                    overlay.appendChild(b);
+
+                    setTimeout(() => b.remove(), (dur + delay + 0.5) * 1000);
+                }, i * 60);
+            }
+
+            // Fade overlay out after all bubbles gone
+            setTimeout(() => {
+                overlay.style.transition = 'opacity 0.5s';
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.remove(), 500);
+            }, 4500);
+        })();
+    </script>
+</body>
+
+</html>
