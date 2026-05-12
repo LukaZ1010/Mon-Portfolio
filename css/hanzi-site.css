@@ -333,7 +333,126 @@ body {
     border-radius: 4px;
 }
 
-@media (max-width: 640px) {
-    .launch-btn { font-size: 0.95rem; padding: 14px 24px; }
-    .launch-icon { font-size: 1.1rem; }
+/* ── RESPONSIVE ── */
+
+/* Tablette (≤ 768px) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 80px; /* Extra top padding so back-btn doesn't overlap */
+    }
+
+    .section {
+        padding: 60px 16px;
+    }
+
+    .section-title {
+        margin-bottom: 36px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 24px 16px;
+    }
+
+    .launch-btn {
+        font-size: 1rem;
+        padding: 16px 28px;
+    }
+
+    .tech-grid {
+        gap: 12px;
+    }
+
+    .tech-pill {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .back-btn {
+        font-size: 0.78rem;
+        padding: 8px 14px;
+    }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+    .hero {
+        padding: 90px 16px 70px;
+        min-height: 100svh; /* Use svh to account for mobile browser chrome */
+    }
+
+    .hero-hanzi {
+        letter-spacing: 4px;
+    }
+
+    .hero-tagline {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .hero-desc {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .pwa-badge {
+        font-size: 0.72rem;
+        padding: 5px 14px;
+    }
+
+    .section {
+        padding: 50px 14px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 14px;
+    }
+
+    .feature-card {
+        padding: 20px 16px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 28px;
+    }
+
+    .launch-btn {
+        font-size: 0.9rem;
+        padding: 14px 20px;
+        gap: 10px;
+    }
+
+    .launch-icon {
+        font-size: 1rem;
+        padding: 4px 10px;
+    }
+
+    .tech-pill {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+
+    .back-btn {
+        font-size: 0.75rem;
+        padding: 7px 12px;
+        top: 12px;
+        left: 12px;
+    }
+
+    .wave-divider {
+        height: 50px;
+    }
 }

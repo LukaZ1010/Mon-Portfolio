@@ -249,6 +249,7 @@ h1, h2, h3, h4 {
     justify-content: center;
     margin-top: 40px;
     perspective: 1000px;
+    overflow: hidden; /* Prevents side cards from overflowing on mobile */
 }
 
 .nav-btn {
@@ -280,6 +281,7 @@ h1, h2, h3, h4 {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .project-card {
@@ -444,21 +446,28 @@ h1, h2, h3, h4 {
     .skill-item img { width: 40px; height: 40px; }
     .skill-item span { font-size: 0.9rem; }
 
-    /* Carrousel de Projets */
-    .carousel-container { height: 350px; }
-    .project-card { width: 240px; height: 280px; padding: 20px; }
-    .project-card h4 { font-size: 1.5rem; }
+    /* Carrousel de Projets — mode single-card sur mobile */
+    .carousel-container { height: 380px; overflow: hidden; }
+    .project-card {
+        width: calc(100% - 90px); /* Full width minus button space */
+        max-width: 300px;
+        height: 320px;
+        padding: 20px;
+    }
+    .project-card h4 { font-size: 1.4rem; }
     
-    .project-card.active { transform: translate(-50%, -50%) scale(1.05); }
-    .project-card:hover.active { transform: translate(-50%, -50%) scale(1.05); }
+    /* Active card centered, full scale */
+    .project-card.active { transform: translate(-50%, -50%) scale(1); }
+    .project-card:hover.active { transform: translate(-50%, -50%) scale(1.02); }
     
-    .project-card.prev { transform: translate(-90%, -50%) scale(0.75); opacity: 0.6; }
-    .project-card.next { transform: translate(-10%, -50%) scale(0.75); opacity: 0.6; }
+    /* Hide side cards completely on mobile to prevent overflow */
+    .project-card.prev { transform: translate(-200%, -50%) scale(0.7); opacity: 0; pointer-events: none; }
+    .project-card.next { transform: translate(100%, -50%) scale(0.7); opacity: 0; pointer-events: none; }
     
-    /* Boutons Carrousel */
-    .nav-btn { width: 40px; height: 40px; font-size: 1.2rem; background: rgba(244, 208, 63, 0.4); }
-    .prev-btn { left: 10px; }
-    .next-btn { right: 10px; }
+    /* Boutons Carrousel — collés aux bords */
+    .nav-btn { width: 36px; height: 36px; font-size: 1.1rem; background: rgba(244, 208, 63, 0.4); }
+    .prev-btn { left: 5px; }
+    .next-btn { right: 5px; }
 
     /* Footer / Sol Marin */
     .ocean-floor { height: 120px; margin-top: 50px; border-top-left-radius: 50% 20px; border-top-right-radius: 50% 20px; }
