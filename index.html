@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Luka</title>
+    <!-- Polices Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="sky">
+            <div class="clouds"></div>
+            <h1 class="portfolio-title">PORTFOLIO</h1>
+        </div>
+        
+        <div class="island-container">
+            <!-- SVG de l'île tropicale -->
+            <svg class="island-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+                <!-- Sable de l'île -->
+                <path d="M 100 400 C 150 300, 650 300, 700 400 Z" fill="#F4D03F" />
+                <path d="M 120 400 C 180 320, 620 320, 680 400 Z" fill="#E5C138" />
+                
+                <!-- Tronc Cocotier 1 (Gauche) -->
+                <path d="M 250 340 Q 230 200, 300 150 L 315 160 Q 255 210, 275 330 Z" fill="#8B5A2B" />
+                <!-- Feuilles Cocotier 1 -->
+                <path d="M 300 150 Q 220 160, 200 220 Q 260 170, 300 150 Z" fill="#2E8B57" />
+                <path d="M 300 150 Q 260 100, 220 80 Q 280 110, 300 150 Z" fill="#3CB371" />
+                <path d="M 300 150 Q 320 80, 360 70 Q 330 110, 300 150 Z" fill="#2E8B57" />
+                <path d="M 300 150 Q 380 140, 420 180 Q 350 160, 300 150 Z" fill="#3CB371" />
+                <circle cx="295" cy="165" r="12" fill="#5C3A21" />
+                <circle cx="310" cy="155" r="10" fill="#4A2F1A" />
+                
+                <!-- Tronc Cocotier 2 (Droite, plus petit) -->
+                <path d="M 550 340 Q 570 230, 500 180 L 485 190 Q 545 240, 525 330 Z" fill="#8B5A2B" />
+                <!-- Feuilles Cocotier 2 -->
+                <path d="M 500 180 Q 580 190, 600 250 Q 540 200, 500 180 Z" fill="#2E8B57" />
+                <path d="M 500 180 Q 540 130, 580 110 Q 520 140, 500 180 Z" fill="#3CB371" />
+                <path d="M 500 180 Q 480 110, 440 100 Q 470 140, 500 180 Z" fill="#2E8B57" />
+                <path d="M 500 180 Q 420 170, 380 210 Q 450 190, 500 180 Z" fill="#3CB371" />
+                <circle cx="495" cy="195" r="10" fill="#5C3A21" />
+                <circle cx="510" cy="185" r="8" fill="#4A2F1A" />
+            </svg>
+        </div>
+
+        <div class="sea-surface">
+            <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <svg class="arrows" viewBox="0 0 24 24" width="30" height="30">
+                    <path d="M12 15.5l-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4z" fill="white" />
+                    <path d="M12 21.5l-6-6 1.4-1.4 4.6 4.6 4.6-4.6 1.4 1.4z" fill="white" opacity="0.5" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <main class="underwater-section">
+        <!-- Conteneur pour les poissons générés en JS -->
+        <div id="fish-container"></div>
+
+        <section id="about" class="content-block">
+            <h2>Luka ZDRAVKOVIC</h2>
+            <p class="subtitle">20 ans</p>
+            <p class="description">Étudiant Full Stack en BTS SIO SLAM</p>
+        </section>
+
+        <section id="skills" class="content-block">
+            <h3>Mes Compétences</h3>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+                    <span>HTML/CSS</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+                    <span>PHP</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" />
+                    <span>SQL</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" />
+                    <span>Photoshop</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-block">
+            <h3>Mes Projets</h3>
+            <div class="carousel-container">
+                <button class="nav-btn prev-btn">&#10094;</button>
+                <div class="carousel-track">
+                    <div class="project-card active clickable-card" onclick="window.open('projects/hanzi-site.html', '_blank')" role="button" tabindex="0">
+                        <div class="card-badge">PWA</div>
+                        <div class="card-icon">五千常用汉字</div>
+                        <h4>Les 5000 caractères chinois les plus utilisés</h4>
+                        <p>Application web progressive (PWA) permettant d'explorer et mémoriser les 5000 caractères chinois les plus courants, avec leur Pinyin et leur signification. Fonctionne hors ligne, installable sur mobile.</p>
+                        <div class="card-cta">Voir le projet →</div>
+                    </div>
+                    <div class="project-card next"><h4>Projet 2</h4><p>Description du projet 2...</p></div>
+                    <div class="project-card"><h4>Projet 3</h4><p>Description du projet 3...</p></div>
+                    <div class="project-card"><h4>Projet 4</h4><p>Description du projet 4...</p></div>
+                    <div class="project-card"><h4>Projet 5</h4><p>Description du projet 5...</p></div>
+                    <div class="project-card prev"><h4>Projet 6</h4><p>Description du projet 6...</p></div>
+                </div>
+                <button class="nav-btn next-btn">&#10095;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ocean-floor">
+        <!-- Maison Ananas de Bob l'éponge -->
+        <img src="img/spongebob.png" alt="Maison Ananas Bob l'Éponge" class="spongebob-house">
+    </footer>
+
+    <script src="js/portfolio.js"></script>
+</body>
+</html>
