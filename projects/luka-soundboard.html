@@ -20,6 +20,9 @@
     <!-- Bubble overlay -->
     <div id="bubble-overlay"></div>
 
+    <!-- Fish container -->
+    <div id="fish-container"></div>
+
     <!-- Back to portfolio -->
     <a href="../index.html" class="back-btn">← Portfolio</a>
 
@@ -120,42 +123,62 @@
 
 
     <script>
-        // ── BUBBLE ENTRY EFFECT ──
+        // ── BUBBLES ──
         (function spawnBubbles() {
             const overlay = document.getElementById('bubble-overlay');
-            const count = 38;
-
-            for (let i = 0; i < count; i++) {
+            for (let i = 0; i < 38; i++) {
                 setTimeout(() => {
                     const b = document.createElement('div');
                     b.classList.add('bubble');
                     const size = 20 + Math.random() * 80;
-                    const left = Math.random() * 100;
                     const dur = 1.8 + Math.random() * 2.2;
                     const delay = Math.random() * 1.4;
-
-                    b.style.cssText = `
-                        width: ${size}px;
-                        height: ${size}px;
-                        left: ${left}%;
-                        bottom: -${size}px;
-                        --dur: ${dur}s;
-                        animation-delay: ${delay}s;
-                    `;
+                    b.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:-${size}px;--dur:${dur}s;animation-delay:${delay}s;`;
                     overlay.appendChild(b);
-
                     setTimeout(() => b.remove(), (dur + delay + 0.5) * 1000);
                 }, i * 60);
             }
-
-            // Fade overlay out after all bubbles gone
             setTimeout(() => {
                 overlay.style.transition = 'opacity 0.5s';
                 overlay.style.opacity = '0';
                 setTimeout(() => overlay.remove(), 500);
             }, 4500);
         })();
+
+        // ── FISH ──
+        (function initFish() {
+            const container = document.getElementById('fish-container');
+            const colors = ['#FFD700','#FF6347','#00CED1','#FF69B4','#32CD32','#FFA500','#A78BFA'];
+            function createFish() {
+                const fish = document.createElement('div');
+                fish.classList.add('fish');
+                const top = 5 + Math.random() * 90;
+                const size = 30 + Math.random() * 40;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const duration = 15 + Math.random() * 25;
+                const dir = Math.random() > 0.5 ? 1 : -1;
+                fish.innerHTML = `<svg viewBox="0 0 100 50" width="${size}" height="${size/2}" style="transform:scaleX(${dir})">
+                    <path d="M 25 25 L 0 5 L 0 45 Z" fill="${color}" />
+                    <path d="M 85 25 C 85 5, 45 -5, 15 25 C 45 55, 85 45, 85 25 Z" fill="${color}" />
+                    <circle cx="70" cy="20" r="3" fill="black" />
+                    <circle cx="71" cy="19" r="1" fill="white" />
+                    <path d="M 45 25 Q 55 15, 60 30 Q 50 35, 45 25 Z" fill="rgba(255,255,255,0.3)" />
+                </svg>`;
+                fish.style.top = `${top}%`;
+                fish.style.left = dir === 1 ? '-100px' : '110%';
+                fish.style.transition = `left ${duration}s linear, top 0.4s ease-out`;
+                container.appendChild(fish);
+                setTimeout(() => { fish.style.left = dir === 1 ? '110%' : '-100px'; }, 100);
+                fish.addEventListener('mouseenter', () => {
+                    fish.style.top = `${parseFloat(fish.style.top) + (Math.random()>0.5?8:-8)}%`;
+                    fish.style.left = `${dir===1 ? window.innerWidth+200 : -200}px`;
+                    fish.style.transitionDuration = `${duration/4}s`;
+                });
+                setTimeout(() => fish.parentNode && fish.remove(), duration * 1000);
+            }
+            for (let i = 0; i < 12; i++) setTimeout(createFish, Math.random() * 8000);
+            setInterval(createFish, 4000);
+        })();
     </script>
 </body>
-
 </html>

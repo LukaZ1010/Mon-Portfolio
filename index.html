@@ -8,10 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <!-- CSS -->
     <link rel="stylesheet" href="css/portfolio.css">
 </head>
-<body>
+<body class="page-index">
     <header class="hero-section">
         <div class="sky">
             <div class="clouds"></div>
@@ -91,6 +93,14 @@
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop" />
                     <span>Photoshop</span>
                 </div>
+                <div class="skill-item">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="SSH" />
+                    <span>SSH / Linux</span>
+                </div>
+                <div class="skill-item">
+                    <img src="https://cdn.simpleicons.org/webflow/146EF5" alt="Webflow" />
+                    <span>Webflow</span>
+                </div>
             </div>
         </section>
 
@@ -99,14 +109,14 @@
             <div class="carousel-container">
                 <button class="nav-btn prev-btn">&#10094;</button>
                 <div class="carousel-track">
-                    <div class="project-card active clickable-card" onclick="window.open('projects/hanzi-site.html', '_blank')" role="button" tabindex="0">
+                    <div class="project-card active clickable-card" onclick="window.location.href='projects/hanzi-site.html'" role="button" tabindex="0">
                         <div class="card-badge">PWA</div>
                         <div class="card-icon">五千常用汉字</div>
                         <h4>Les 5000 caractères chinois les plus utilisés</h4>
                         <p>Application web progressive (PWA) permettant d'explorer et mémoriser les 5000 caractères chinois les plus courants, avec leur Pinyin et leur signification. Fonctionne hors ligne, installable on mobile.</p>
                         <div class="card-cta">Voir le projet →</div>
                     </div>
-                    <div class="project-card next clickable-card" onclick="window.open('projects/luka-soundboard.html', '_blank')" role="button" tabindex="0">
+                    <div class="project-card next clickable-card" onclick="window.location.href='projects/luka-soundboard.html'" role="button" tabindex="0">
                         <div class="card-badge">C++ / Qt</div>
                         <div class="card-icon">🔊</div>
                         <h4>Luka Soundboard</h4>
@@ -121,6 +131,23 @@
                 <button class="nav-btn next-btn">&#10095;</button>
             </div>
         </section>
+        <!-- Fond marin : maison ananas de Bob l'éponge -->
+        <div class="seabed">
+            <!-- Zone scène : contient l'ananas et les décos, flex-1 -->
+            <div class="seabed-scene">
+                <img class="pineapple-house" src="img/spongebob.png" alt="Maison de Bob l'éponge" />
+                <!-- Rochers et algues -->
+                <div class="seabed-deco">
+                    <div class="rock rock-1"></div>
+                    <div class="rock rock-2"></div>
+                    <div class="seaweed sw-1"></div>
+                    <div class="seaweed sw-2"></div>
+                    <div class="seaweed sw-3"></div>
+                </div>
+            </div>
+            <!-- Sable tout en bas -->
+            <div class="sand-floor"></div>
+        </div>
     </main>
 
 
