@@ -1,0 +1,43 @@
+Viewed manifest.json:1-18
+
+Pour installer votre application (PWA) sur votre téléphone, vous n'avez pas besoin d'une extension sur le téléphone lui-même, mais d'une extension sur votre ordinateur pour "diffuser" l'application sur votre réseau local.
+
+Voici l'extension recommandée et les étapes à suivre :
+
+### 1. L'extension à installer (sur VS Code)
+Installez l'extension **"Live Server"** (créée par Ritwick Dey). 
+*   Elle permet de créer un serveur local en un clic pour visualiser votre code en temps réel.
+
+### 2. Les étapes pour le télécharger sur votre téléphone
+
+#### Étape A : Lancer le serveur sur l'ordinateur
+1.  Ouvrez votre projet dans VS Code.
+2.  Cliquez sur le bouton **"Go Live"** en bas à droite de la barre d'état. Votre navigateur par défaut s'ouvrira sur `http://127.0.0.1:5500`.
+
+#### Étape B : Trouver l'adresse IP de votre ordinateur
+Votre téléphone ne peut pas accéder à "127.0.0.1" (qui signifie "cet appareil"). Il doit utiliser l'adresse IP de votre ordinateur sur votre réseau Wi-Fi.
+1.  Ouvrez un terminal sur votre PC.
+2.  Tapez la commande : `ipconfig`
+3.  Cherchez la ligne **"Adresse IPv4"** (ex: `192.168.1.15`).
+
+#### Étape C : Ouvrir l'application sur le téléphone
+1.  Connectez votre téléphone au **même réseau Wi-Fi** que votre ordinateur.
+2.  Ouvrez Chrome (Android) ou Safari (iOS).
+3.  Dans la barre d'adresse, tapez votre IP suivie du port 5500. Exemple : `http://192.168.1.15:5500`
+
+#### Étape D : "Télécharger" (Installer) l'application
+Une fois que la page s'affiche sur votre téléphone :
+*   **Sur Android (Chrome) :** Cliquez sur les **3 petits points** en haut à droite et sélectionnez **"Installer l'application"** ou **"Ajouter à l'écran d'accueil"**.
+*   **Sur iPhone (Safari) :** Cliquez sur l'icône **Partager** (le carré avec une flèche vers le haut) et sélectionnez **"Sur l'écran d'accueil"**.
+
+---
+
+### ⚠️ Note Importante sur le PWA (HTTPS)
+Pour que les fonctionnalités de "PWA" (comme le mode hors-ligne ou l'icône personnalisée) fonctionnent parfaitement, le navigateur exige normalement une connexion sécurisée (**HTTPS**).
+
+Si vous voulez une installation "pro" et permanente :
+1.  Hébergez vos fichiers gratuitement sur **GitHub Pages**, **Vercel** ou **Netlify**.
+2.  Ces services vous donneront une adresse en `https://...`.
+3.  En ouvrant ce lien sur votre téléphone, l'option "Installer" apparaîtra automatiquement et l'application fonctionnera même sans connexion internet.
+
+**Voulez-vous que je vous aide à préparer la mise en ligne sur l'un de ces services ?**
