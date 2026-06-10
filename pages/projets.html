@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets Réalisés - Portfolio de Luka Zdravkovic - Étudiant en BTS SIO option SLAM à l'IPSSI.">
+    <title>Luka Zdravkovic | Projets - Portfolio BTS SIO SLAM</title>
+    
+    <!-- Polices Google DynaPuff et Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
+    <!-- CSS Unifié Thème Antigravity (Relatif parent) -->
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body class="page-subpage">
+
+    <!-- Transition de plongée sous-marine -->
+    <div id="bubble-overlay"></div>
+
+    <!-- En-tête / Barre de navigation Sticky Glassmorphism -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-accent">&lt;</span>Luka.Z<span class="logo-accent"> /&gt;</span>
+                <span class="logo-sub">BTS SIO SLAM</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="synthese.html" class="nav-link">Synthèse SLAM</a></li>
+                    <li><a href="experience.html" class="nav-link">Stage IT SYSTEME</a></li>
+                    <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille Tech</a></li>
+                </ul>
+            </nav>
+
+            <!-- Indicateur de l'école IPSSI -->
+            <div class="school-badge">
+                <span class="badge-dot"></span>
+                <span>IPSSI Paris</span>
+            </div>
+
+            <!-- Menu Hamburger Mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Zone principale contenant les cartes de projets -->
+    <main class="main-content">
+        <!-- Conteneur pour les poissons interactifs (JS) -->
+        <div id="fish-container"></div>
+
+        <!-- ================= SECTION 4 : PROJETS RÉALISÉS ================= -->
+        <section id="projets" class="page-section">
+            <div class="section-header" style="text-align: center;">
+                <span class="section-tag">Projets & Applications</span>
+                <h2>Projets Réalisés</h2>
+                <p class="section-desc" style="margin-left: auto; margin-right: auto;">Explorez les projets académiques et personnels que j'ai réalisés au cours de ma formation.</p>
+            </div>
+
+            <!-- Grille de projets -->
+            <div class="projects-grid">
+
+                <!-- Projet 1 : E-Commerce PHP MVC -->
+                <div class="project-card clickable-card" onclick="window.location.href='projet-ecommerce.html'" role="button" tabindex="0">
+                    <div class="card-badge">Site Web</div>
+                    <div class="card-icon">🛒</div>
+                    <h4>Site E-Commerce PHP MVC</h4>
+                    <p>Développement en PHP Orienté Objet complet d'une boutique en ligne avec une architecture MVC, sans framework, avec gestion de sessions et sécurisation de bases de données SQL.</p>
+                    <div class="card-cta">Détails du projet →</div>
+                </div>
+
+                <!-- Projet 2 : 5000 Hanzi PWA -->
+                <div class="project-card clickable-card" onclick="window.location.href='projet-hanzi.html'" role="button" tabindex="0">
+                    <div class="card-badge">PWA</div>
+                    <div class="card-icon">五千常用汉字</div>
+                    <h4>Les 5000 caractères chinois</h4>
+                    <p>Application Web Progressive (PWA) permettant d'explorer et de mémoriser les 5000 caractères chinois les plus courants. Fonctionne 100% hors ligne et installable sur smartphone.</p>
+                    <div class="card-cta">Détails du projet →</div>
+                </div>
+
+                <!-- Projet 3 : Luka Soundboard -->
+                <div class="project-card clickable-card" onclick="window.location.href='projet-soundboard.html'" role="button" tabindex="0">
+                    <div class="card-badge">C++ / Qt</div>
+                    <div class="card-icon">🔊</div>
+                    <h4>Luka Soundboard</h4>
+                    <p>Application Windows permettant d'injecter des sons et de capturer l'audio de vos applications pour le diffuser dans le micro avec une très faible latence WASAPI.</p>
+                    <div class="card-cta">Détails du projet →</div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Luka Zdravkovic</p>
+            <div class="social-links">
+                <a href="https://github.com/LukaZ1010" target="_blank" class="social-link-item" aria-label="GitHub de Luka">GitHub</a>
+                <a href="https://www.linkedin.com/in/luka-zdravkovic-32a90b304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link-item" aria-label="LinkedIn de Luka">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de logique unifiée (Relatif parent) -->
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>

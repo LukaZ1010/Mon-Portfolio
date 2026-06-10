@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stage IT SYSTEME - Portfolio de Luka Zdravkovic - Étudiant en BTS SIO option SLAM à l'IPSSI.">
+    <title>Luka Zdravkovic | Stage IT SYSTEME - Portfolio BTS SIO SLAM</title>
+    
+    <!-- Polices Google DynaPuff et Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
+    <!-- CSS Unifié Thème Antigravity (Relatif parent) -->
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body class="page-subpage">
+
+    <!-- Transition de plongée sous-marine -->
+    <div id="bubble-overlay"></div>
+
+    <!-- En-tête / Barre de navigation Sticky Glassmorphism -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-accent">&lt;</span>Luka.Z<span class="logo-accent"> /&gt;</span>
+                <span class="logo-sub">BTS SIO SLAM</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="synthese.html" class="nav-link">Synthèse SLAM</a></li>
+                    <li><a href="experience.html" class="nav-link active">Stage IT SYSTEME</a></li>
+                    <li><a href="projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille Tech</a></li>
+                </ul>
+            </nav>
+
+            <!-- Indicateur de l'école IPSSI -->
+            <div class="school-badge">
+                <span class="badge-dot"></span>
+                <span>IPSSI Paris</span>
+            </div>
+
+            <!-- Menu Hamburger Mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Zone principale contenant le stage et les missions -->
+    <main class="main-content">
+        <!-- Conteneur pour les poissons interactifs (JS) -->
+        <div id="fish-container"></div>
+
+        <!-- ================= SECTION 3 : EXPÉRIENCE EN ENTREPRISE (STAGE) ================= -->
+        <section id="experience" class="page-section">
+            <div class="section-header">
+                <span class="section-tag">Expérience Professionnelle</span>
+                <h2>Stage chez IT SYSTEME</h2>
+                <p class="section-desc">Période du 27/04/2026 au 26/06/2026 (8 semaines) | IT SYSTEME est une entreprise spécialisée dans l'intégration de progiciels et l'automatisation des flux métiers.</p>
+            </div>
+
+            <!-- Liste simple et structurée des missions -->
+            <div class="experience-list">
+                
+                <!-- Mission 1 -->
+                <div class="experience-card">
+                    <div class="card-header-group">
+                        <span class="card-number">Mission 1</span>
+                        <h3>Migration de Base de Données SQL vers Pennylane</h3>
+                    </div>
+                    <p class="card-explanation">
+                        Extraction, filtrage et transfert de données financières de production SQL vers le progiciel de gestion financière Pennylane pour centraliser la comptabilité de l'entreprise.
+                    </p>
+                    <div class="card-details-list">
+                        <div>
+                            <strong>Objectifs :</strong> Écrire des scripts d'extraction SQL robustes et garantir l'exactitude des écritures comptables migrées sans doublons.
+                        </div>
+                        <div>
+                            <strong>Résultats :</strong> Intégration de plus de 10 000 entrées financières dans Pennylane, validée par l'équipe financière.
+                        </div>
+                    </div>
+                    <div class="card-tech-badges">
+                        <span class="tech-badge">SQL</span>
+                        <span class="tech-badge">Pennylane API</span>
+                        <span class="tech-badge">Traitement de données</span>
+                    </div>
+                </div>
+
+                <!-- Mission 2 -->
+                <div class="experience-card">
+                    <div class="card-header-group">
+                        <span class="card-number">Mission 2</span>
+                        <h3>Administration Système & Déploiement Flexflow (SSH / Linux)</h3>
+                    </div>
+                    <p class="card-explanation">
+                        Configuration d'un serveur sécurisé sous Ubuntu et installation de la solution professionnelle Flexflow pour l'automatisation des flux de travail internes de l'entreprise.
+                    </p>
+                    <div class="card-details-list">
+                        <div>
+                            <strong>Objectifs :</strong> Installer le système d'exploitation Ubuntu Server, configurer les accès réseau sécurisés via SSH et déployer l'outil Flexflow.
+                        </div>
+                        <div>
+                            <strong>Résultats :</strong> Instance Flexflow fonctionnelle et sécurisée, utilisable par l'équipe d'administration pour créer des workflows automatisés.
+                        </div>
+                    </div>
+                    <div class="card-tech-badges">
+                        <span class="tech-badge">Linux (Ubuntu Server)</span>
+                        <span class="tech-badge">Protocole SSH</span>
+                        <span class="tech-badge">Flexflow (DevOps)</span>
+                    </div>
+                </div>
+
+                <!-- Mission 3 -->
+                <div class="experience-card">
+                    <div class="card-header-group">
+                        <span class="card-number">Mission 3</span>
+                        <h3>Développement & Intégration Web Responsive</h3>
+                    </div>
+                    <p class="card-explanation">
+                        Conception graphique et développement de 3 nouvelles pages fonctionnelles et responsives pour le site web institutionnel de l'entreprise.
+                    </p>
+                    <div class="card-details-list">
+                        <div>
+                            <strong>Objectifs :</strong> Créer une maquette UI sous Webflow puis exporter et adapter manuellement le code source (HTML/CSS) pour l'intégrer au site officiel existant.
+                        </div>
+                        <div>
+                            <strong>Résultats :</strong> Pages intégrées et adaptées pour tous les écrans mobiles (responsive), avec un gain de performance de chargement de 25%.
+                        </div>
+                    </div>
+                    <div class="card-tech-badges">
+                        <span class="tech-badge">HTML5 / CSS3</span>
+                        <span class="tech-badge">JavaScript natif</span>
+                        <span class="tech-badge">Webflow Integration</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Luka Zdravkovic</p>
+            <div class="social-links">
+                <a href="https://github.com/LukaZ1010" target="_blank" class="social-link-item" aria-label="GitHub de Luka">GitHub</a>
+                <a href="https://www.linkedin.com/in/luka-zdravkovic-32a90b304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link-item" aria-label="LinkedIn de Luka">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de logique unifiée (Relatif parent) -->
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>

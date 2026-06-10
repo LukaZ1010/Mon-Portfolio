@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Luka Soundboard - Injection Audio & Routage Micro de Luka Zdravkovic.">
+    <title>Luka Zdravkovic | Luka Soundboard - Projet C++ / Qt</title>
+    
+    <!-- Polices Google DynaPuff et Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
+    <!-- CSS Unifié Thème Antigravity (Relatif parent) -->
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body class="page-subpage">
+
+    <!-- Transition de plongée sous-marine -->
+    <div id="bubble-overlay"></div>
+
+    <!-- En-tête / Barre de navigation Sticky Glassmorphism -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-accent">&lt;</span>Luka.Z<span class="logo-accent"> /&gt;</span>
+                <span class="logo-sub">BTS SIO SLAM</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="synthese.html" class="nav-link">Synthèse SLAM</a></li>
+                    <li><a href="experience.html" class="nav-link">Stage IT SYSTEME</a></li>
+                    <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille Tech</a></li>
+                </ul>
+            </nav>
+
+            <!-- Indicateur de l'école IPSSI -->
+            <div class="school-badge">
+                <span class="badge-dot"></span>
+                <span>IPSSI Paris</span>
+            </div>
+
+            <!-- Menu Hamburger Mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Zone principale contenant les détails du projet -->
+    <main class="main-content">
+        <!-- Conteneur pour les poissons interactifs (JS) -->
+        <div id="fish-container"></div>
+
+        <!-- ================= SECTION : DÉTAIL PROJET SOUNDBOARD ================= -->
+        <section id="projet-detail" class="page-section">
+            <div class="section-header">
+                <a href="projets.html" class="real-link" style="display: inline-block; margin-bottom: 15px;">← Retour aux projets</a>
+                <span class="section-tag" style="display: block; width: max-content; margin-left: auto; margin-right: auto;">Création Personnelle (C++ / Qt)</span>
+                <h2>Luka Soundboard</h2>
+                <p class="section-desc" style="margin-left: auto; margin-right: auto;">Application bureau Windows permettant l'injection de fichiers audio et la redirection de flux applicatifs vers la sortie microphone.</p>
+            </div>
+
+            <div class="experience-card" style="text-align: left;">
+                <p class="card-explanation">
+                    Conçue pour les streamers et les créateurs de contenu, cette application permet de centraliser la gestion d'effets sonores, de les jouer à la volée, et de capturer à chaud le flux audio d'autres logiciels (navigateur, Spotify) pour les mixer en temps réel avec le micro.
+                </p>
+
+                <div class="project-details">
+                    <!-- Colonne 1 : Features -->
+                    <div class="project-detail-column">
+                        <h4>Fonctionnalités Clés</h4>
+                        <ul class="clean-bullet-list">
+                            <li><strong>Bibliothèque de sons :</strong> Gestion complète permettant d'importer, de nommer et d'attribuer des raccourcis clavier à des clips audio (MP3, WAV).</li>
+                            <li><strong>Injection Micro :</strong> Redirection directe du son joué vers l'entrée micro des logiciels tiers (Discord, Microsoft Teams, jeux vidéo).</li>
+                            <li><strong>Routage d'application :</strong> Capture dynamique de l'audio d'une application spécifique pour la diffuser dans le flux micro.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 2 : Routage WASAPI -->
+                    <div class="project-detail-column">
+                        <h4>Optimisation & Architecture</h4>
+                        <ul class="clean-bullet-list">
+                            <li><strong>API Windows WASAPI :</strong> Utilisation du protocole de bas niveau WASAPI de Windows pour assurer une latence de traitement quasi nulle.</li>
+                            <li><strong>C++ & Qt6 :</strong> Développement compilé et interface fluide sous Qt, minimisant la charge CPU pour ne pas pénaliser les performances des jeux ou du stream.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-techs" style="margin-top: 1.5rem; border-top: 1.5px solid rgba(255,255,255,0.06); padding-top: 1.5rem; margin-bottom: 1.5rem;">
+                    <span class="tech-badge">C++ / Qt6</span>
+                    <span class="tech-badge">WASAPI Audio API</span>
+                    <span class="tech-badge">Windows Core Audio</span>
+                    <span class="tech-badge">CMake Build System</span>
+                    <span class="tech-badge">QSS Styling</span>
+                    <span class="tech-badge">Virtual Audio Cables</span>
+                </div>
+
+                <!-- Galerie d'images -->
+                <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--sand-color); text-transform: uppercase; font-size: 0.95rem; letter-spacing: 0.8px;">Aperçu de l'Interface</h4>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../img/luka_screenshot_1.jpg" alt="Interface principale du Soundboard">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../img/luka_screenshot_2.jpg" alt="Routage audio des applications">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../img/luka_screenshot_3.jpg" alt="Réglages et mixage audio">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Luka Zdravkovic</p>
+            <div class="social-links">
+                <a href="https://github.com/LukaZ1010" target="_blank" class="social-link-item" aria-label="GitHub de Luka">GitHub</a>
+                <a href="https://www.linkedin.com/in/luka-zdravkovic-32a90b304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link-item" aria-label="LinkedIn de Luka">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de logique unifiée (Relatif parent) -->
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>

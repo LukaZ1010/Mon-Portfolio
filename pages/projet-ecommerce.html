@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site E-Commerce PHP MVC - Projet Académique de Luka Zdravkovic.">
+    <title>Luka Zdravkovic | E-Commerce PHP MVC - Projet BTS SIO</title>
+    
+    <!-- Polices Google DynaPuff et Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
+    <!-- CSS Unifié Thème Antigravity (Relatif parent) -->
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body class="page-subpage">
+
+    <!-- Transition de plongée sous-marine -->
+    <div id="bubble-overlay"></div>
+
+    <!-- En-tête / Barre de navigation Sticky Glassmorphism -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-accent">&lt;</span>Luka.Z<span class="logo-accent"> /&gt;</span>
+                <span class="logo-sub">BTS SIO SLAM</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="synthese.html" class="nav-link">Synthèse SLAM</a></li>
+                    <li><a href="experience.html" class="nav-link">Stage IT SYSTEME</a></li>
+                    <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille Tech</a></li>
+                </ul>
+            </nav>
+
+            <!-- Indicateur de l'école IPSSI -->
+            <div class="school-badge">
+                <span class="badge-dot"></span>
+                <span>IPSSI Paris</span>
+            </div>
+
+            <!-- Menu Hamburger Mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Zone principale contenant les détails du projet -->
+    <main class="main-content">
+        <!-- Conteneur pour les poissons interactifs (JS) -->
+        <div id="fish-container"></div>
+
+        <!-- ================= SECTION : DÉTAIL PROJET E-COMMERCE ================= -->
+        <section id="projet-detail" class="page-section">
+            <div class="section-header">
+                <a href="projets.html" class="real-link" style="display: inline-block; margin-bottom: 15px;">← Retour aux projets</a>
+                <span class="section-tag" style="display: block; width: max-content; margin-left: auto; margin-right: auto;">Projet Académique IPSSI</span>
+                <h2>Site E-Commerce PHP complet (MVC)</h2>
+                <p class="section-desc" style="margin-left: auto; margin-right: auto;">Développement complet d'une plateforme de commerce électronique fonctionnelle, structurée selon le modèle MVC et écrite en PHP natif sans framework.</p>
+            </div>
+
+            <div class="experience-card" style="text-align: left;">
+                <p class="card-explanation">
+                    L'objectif de ce projet était de concevoir une application web robuste en mettant en pratique les concepts de Programmation Orientée Objet (POO) en PHP, la modélisation de bases de données relationnelles SQL et la sécurisation des sessions et des données utilisateurs.
+                </p>
+
+                <div class="project-details">
+                    <!-- Colonne 1 : Architecture MVC -->
+                    <div class="project-detail-column">
+                        <h4>Architecture Logicielle MVC</h4>
+                        <ul class="clean-bullet-list">
+                            <li><strong>Modèle (Model) :</strong> Gère les interactions et la communication avec la base de données SQL. Utilise des requêtes préparées PDO pour sécuriser les données et éviter toute injection SQL.</li>
+                            <li><strong>Vue (View) :</strong> Reçoit les variables formatées issues du contrôleur et s'occupe du rendu visuel de la page en HTML5 et CSS3.</li>
+                            <li><strong>Contrôleur (Controller) :</strong> Intercepte les requêtes HTTP envoyées par l'utilisateur, traite la logique métier et choisit la vue à afficher.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 2 : Fonctionnalités & Sécurité -->
+                    <div class="project-detail-column">
+                        <h4>Fonctionnalités Clés Implémentées</h4>
+                        <ul class="clean-bullet-list">
+                            <li><strong>Gestion des Sessions :</strong> Inscription et authentification sécurisées. Les mots de passe sont hachés en base de données à l'aide de l'algorithme `bcrypt` (via `password_hash`).</li>
+                            <li><strong>Catalogue Dynamique & Panier :</strong> Chargement automatique des produits depuis MySQL. Gestion d'un panier d'achat dynamique stocké dans la session de l'utilisateur.</li>
+                            <li><strong>Validation & Sécurisation :</strong> Nettoyage rigoureux de toutes les entrées utilisateurs (formulaires) afin de prévenir les failles XSS et les injections SQL.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-techs" style="margin-top: 1.5rem; border-top: 1.5px solid rgba(255,255,255,0.06); padding-top: 1.5rem;">
+                    <span class="tech-badge">PHP 8 (POO)</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">PDO</span>
+                    <span class="tech-badge">Architecture MVC</span>
+                    <span class="tech-badge">Sessions PHP</span>
+                    <span class="tech-badge">Sécurisation XSS/SQL</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Luka Zdravkovic</p>
+            <div class="social-links">
+                <a href="https://github.com/LukaZ1010" target="_blank" class="social-link-item" aria-label="GitHub de Luka">GitHub</a>
+                <a href="https://www.linkedin.com/in/luka-zdravkovic-32a90b304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link-item" aria-label="LinkedIn de Luka">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de logique unifiée (Relatif parent) -->
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>

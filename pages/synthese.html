@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Synthèse SLAM - Portfolio de Luka Zdravkovic - Étudiant en BTS SIO option SLAM à l'IPSSI.">
+    <title>Luka Zdravkovic | Synthèse SLAM - Portfolio BTS SIO SLAM</title>
+    
+    <!-- Polices Google DynaPuff et Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
+    <!-- CSS Unifié Thème Antigravity (Relatif parent) -->
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body class="page-subpage">
+
+    <!-- Transition de plongée sous-marine -->
+    <div id="bubble-overlay"></div>
+
+    <!-- En-tête / Barre de navigation Sticky Glassmorphism -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-accent">&lt;</span>Luka.Z<span class="logo-accent"> /&gt;</span>
+                <span class="logo-sub">BTS SIO SLAM</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="synthese.html" class="nav-link active">Synthèse SLAM</a></li>
+                    <li><a href="experience.html" class="nav-link">Stage IT SYSTEME</a></li>
+                    <li><a href="projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille Tech</a></li>
+                </ul>
+            </nav>
+
+            <!-- Indicateur de l'école IPSSI -->
+            <div class="school-badge">
+                <span class="badge-dot"></span>
+                <span>IPSSI Paris</span>
+            </div>
+
+            <!-- Menu Hamburger Mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Zone principale contenant uniquement la Synthèse SLAM -->
+    <main class="main-content">
+        <!-- Conteneur pour les poissons interactifs (JS) -->
+        <div id="fish-container"></div>
+
+        <!-- ================= SECTION 2 : LE TABLEAU DE SYNTHÈSE SLAM ================= -->
+        <section id="synthese" class="page-section">
+            <div class="section-header">
+                <span class="section-tag">Référentiel National BTS SIO</span>
+                <h2>Tableau de Synthèse SLAM</h2>
+                <p class="section-desc">Ce tableau met en relation mes réalisations académiques et professionnelles avec les compétences attendues du référentiel officiel.</p>
+            </div>
+
+            <!-- Filtre simple par type de réalisation -->
+            <div class="filter-container">
+                <span class="filter-label">Filtrer les réalisations :</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Toutes</button>
+                    <button class="filter-btn" data-filter="stage">Stage IT SYSTEME</button>
+                    <button class="filter-btn" data-filter="php-mvc">E-Commerce PHP (IPSSI)</button>
+                    <button class="filter-btn" data-filter="hanzi">Hanzi (PWA)</button>
+                </div>
+            </div>
+
+            <!-- Tableau épuré sous-marin -->
+            <div class="table-wrapper">
+                <table class="synthesis-table">
+                    <thead>
+                        <tr>
+                            <th>Bloc de Compétences</th>
+                            <th>Description du Référentiel</th>
+                            <th>Réalisation Associée</th>
+                            <th>Technologies & Actions Mises en Œuvre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!-- Compétence 1 (E-Commerce) -->
+                        <tr data-category="php-mvc">
+                            <td class="col-block"><span class="block-tag">Bloc 1</span></td>
+                            <td class="col-desc"><strong>[Compétence 1]</strong> Développement et maintenance de solutions applicatives</td>
+                            <td class="col-real">
+                                <a href="projets.html#ecommerce" class="real-link">Site E-Commerce PHP MVC</a>
+                            </td>
+                            <td class="col-actions">
+                                <p>Développement en PHP Orienté Objet d'une boutique avec architecture MVC (Modèle-Vue-Contrôleur) sans framework, gestion des sessions et sécurisation SQL.</p>
+                                <div class="tags-list">
+                                    <span class="tag">PHP 8</span>
+                                    <span class="tag">MVC</span>
+                                    <span class="tag">PDO</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Compétence 1 (Hanzi PWA) -->
+                        <tr data-category="hanzi">
+                            <td class="col-block"><span class="block-tag">Bloc 1</span></td>
+                            <td class="col-desc"><strong>[Compétence 1]</strong> Développement et maintenance de solutions applicatives</td>
+                            <td class="col-real">
+                                <a href="projets.html#hanzi" class="real-link">5000 Hanzi (PWA)</a>
+                            </td>
+                            <td class="col-actions">
+                                <p>Création d'un Service Worker en JavaScript natif gérant des stratégies de cache locales pour assurer l'accès et le fonctionnement hors-ligne de l'application.</p>
+                                <div class="tags-list">
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Service Worker</span>
+                                    <span class="tag">PWA Cache</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Compétence 2 -->
+                        <tr data-category="stage">
+                            <td class="col-block"><span class="block-tag">Bloc 2</span></td>
+                            <td class="col-desc"><strong>[Compétence 2]</strong> Gestion des bases de données</td>
+                            <td class="col-real">
+                                <a href="experience.html" class="real-link">Stage IT SYSTEME</a>
+                            </td>
+                            <td class="col-actions">
+                                <p>Extraction de données financières depuis des tables relationnelles SQL, nettoyage des doublons et migration comptable vers l'outil Pennylane.</p>
+                                <div class="tags-list">
+                                    <span class="tag">SQL</span>
+                                    <span class="tag">Migration</span>
+                                    <span class="tag">Pennylane</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Compétence 3 (Stage IT) -->
+                        <tr data-category="stage">
+                            <td class="col-block"><span class="block-tag">Bloc 1</span></td>
+                            <td class="col-desc"><strong>[Compétence 3]</strong> Conception et adaptation d'interfaces utilisateur (UI)</td>
+                            <td class="col-real">
+                                <a href="experience.html" class="real-link">Stage IT SYSTEME</a>
+                            </td>
+                            <td class="col-actions">
+                                <p>Maquettage et intégration sémantique responsive de 3 pages du site web officiel de l'entreprise IT SYSTEME pour optimiser le parcours client.</p>
+                                <div class="tags-list">
+                                    <span class="tag">HTML5 / CSS3</span>
+                                    <span class="tag">Responsive</span>
+                                    <span class="tag">Webflow</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Compétence 3 (Hanzi PWA) -->
+                        <tr data-category="hanzi">
+                            <td class="col-block"><span class="block-tag">Bloc 1</span></td>
+                            <td class="col-desc"><strong>[Compétence 3]</strong> Conception et adaptation d'interfaces utilisateur (UI)</td>
+                            <td class="col-real">
+                                <a href="projets.html#hanzi" class="real-link">5000 Hanzi (PWA)</a>
+                            </td>
+                            <td class="col-actions">
+                                <p>Développement Mobile-First et conception responsive d'une interface d'apprentissage rapide. Intégration de manifest.json pour un rendu autonome (standalone).</p>
+                                <div class="tags-list">
+                                    <span class="tag">HTML5 / CSS3</span>
+                                    <span class="tag">manifest.json</span>
+                                    <span class="tag">Mobile First</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- Compétence 4 -->
+                        <tr data-category="stage">
+                            <td class="col-block"><span class="block-tag">Bloc 3</span></td>
+                            <td class="col-desc"><strong>[Compétence 4]</strong> Administration système & Support client</td>
+                            <td class="col-real">
+                                <a href="experience.html" class="real-link">Stage IT SYSTEME</a>
+                            </td>
+                            <td class="col-actions">
+                                <p>Administration à distance en SSH, configuration d'un serveur d'exploitation Linux (Ubuntu) et déploiement de l'outil de processus métier Flexflow.</p>
+                                <div class="tags-list">
+                                    <span class="tag">Ubuntu Server</span>
+                                    <span class="tag">SSH</span>
+                                    <span class="tag">Flexflow</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Luka Zdravkovic</p>
+            <div class="social-links">
+                <a href="https://github.com/LukaZ1010" target="_blank" class="social-link-item" aria-label="GitHub de Luka">GitHub</a>
+                <a href="https://www.linkedin.com/in/luka-zdravkovic-32a90b304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link-item" aria-label="LinkedIn de Luka">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de logique unifiée (Relatif parent) -->
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>

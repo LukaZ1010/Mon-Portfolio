@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="5000 Hanzi PWA - Application Progressive pour apprendre le chinois de Luka Zdravkovic.">
+    <title>Luka Zdravkovic | 5000 Hanzi PWA - Projet BTS SIO</title>
+    
+    <!-- Polices Google DynaPuff et Nunito -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    
+    <!-- CSS Unifié Thème Antigravity (Relatif parent) -->
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body class="page-subpage">
+
+    <!-- Transition de plongée sous-marine -->
+    <div id="bubble-overlay"></div>
+
+    <!-- En-tête / Barre de navigation Sticky Glassmorphism -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-accent">&lt;</span>Luka.Z<span class="logo-accent"> /&gt;</span>
+                <span class="logo-sub">BTS SIO SLAM</span>
+            </a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="../index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="synthese.html" class="nav-link">Synthèse SLAM</a></li>
+                    <li><a href="experience.html" class="nav-link">Stage IT SYSTEME</a></li>
+                    <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille Tech</a></li>
+                </ul>
+            </nav>
+
+            <!-- Indicateur de l'école IPSSI -->
+            <div class="school-badge">
+                <span class="badge-dot"></span>
+                <span>IPSSI Paris</span>
+            </div>
+
+            <!-- Menu Hamburger Mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Zone principale contenant les détails du projet -->
+    <main class="main-content">
+        <!-- Conteneur pour les poissons interactifs (JS) -->
+        <div id="fish-container"></div>
+
+        <!-- ================= SECTION : DÉTAIL PROJET HANZI ================= -->
+        <section id="projet-detail" class="page-section">
+            <div class="section-header">
+                <a href="projets.html" class="real-link" style="display: inline-block; margin-bottom: 15px;">← Retour aux projets</a>
+                <span class="section-tag" style="display: block; width: max-content; margin-left: auto; margin-right: auto;">Création Personnelle & Académique</span>
+                <h2>5000 Hanzi (Progressive Web App)</h2>
+                <p class="section-desc" style="margin-left: auto; margin-right: auto;">Conception et développement d'une Progressive Web App (PWA) conçue pour la mémorisation et la recherche des 5000 caractères chinois les plus fréquents.</p>
+            </div>
+
+            <div class="experience-card" style="text-align: left;">
+                <p class="card-explanation">
+                    Ce projet consistait à créer une application web légère et autonome capable de fonctionner sans aucune connexion Internet (offline) et installable sur l'écran d'accueil d'un smartphone pour proposer une expérience similaire à celle d'une application native.
+                </p>
+
+                <div class="project-details">
+                    <!-- Colonne 1 : PWA & SW -->
+                    <div class="project-detail-column">
+                        <h4>Technologies Progressive Web App</h4>
+                        <ul class="clean-bullet-list">
+                            <li><strong>Service Worker (sw.js) :</strong> Fichier JavaScript exécuté en arrière-plan. Il intercepte les requêtes réseau et applique une stratégie de mise en cache locale via la Cache API, assurant un chargement immédiat et un accès hors-ligne.</li>
+                            <li><strong>Web App Manifest (manifest.json) :</strong> Fichier de métadonnées spécifiant l'affichage autonome (standalone), les icônes de l'application, et la couleur de thème (`#d32f2f`) pour permettre son installation native.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Colonne 2 : UI & Données -->
+                    <div class="project-detail-column">
+                        <h4>Intégration & Performance</h4>
+                        <ul class="clean-bullet-list">
+                            <li><strong>Base de Données Locale :</strong> Structuration optimisée de l'ensemble des 5000 caractères, de leur Pinyin (prononciation) et de leurs définitions directement au sein du code pour une recherche instantanée sans API distante.</li>
+                            <li><strong>Interface Responsive :</strong> Conception Mobile-First utilisant un design fluide et ultra-réactif pour un confort de lecture maximal sur smartphone.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-techs" style="margin-top: 1.5rem; border-top: 1.5px solid rgba(255,255,255,0.06); padding-top: 1.5rem; margin-bottom: 1.5rem;">
+                    <span class="tech-badge">HTML5 / CSS3</span>
+                    <span class="tech-badge">JavaScript natif</span>
+                    <span class="tech-badge">Service Worker</span>
+                    <span class="tech-badge">Cache API</span>
+                    <span class="tech-badge">manifest.json</span>
+                    <span class="tech-badge">Conception Mobile First</span>
+                </div>
+
+                <div>
+                    <a href="../../Hanzi/index.html" target="_blank" class="btn btn-primary">
+                        <span>Ouvrir l'application Hanzi</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="btn-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Luka Zdravkovic</p>
+            <div class="social-links">
+                <a href="https://github.com/LukaZ1010" target="_blank" class="social-link-item" aria-label="GitHub de Luka">GitHub</a>
+                <a href="https://www.linkedin.com/in/luka-zdravkovic-32a90b304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link-item" aria-label="LinkedIn de Luka">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de logique unifiée (Relatif parent) -->
+    <script src="../js/portfolio.js"></script>
+</body>
+</html>
